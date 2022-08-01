@@ -3,7 +3,7 @@ A translation from Gabriel Bittencourts' Finance Tool, for viewing the history a
 
 ## Installation
 1. install [tampermonkey](https://www.tampermonkey.net/) in your browser
-2. [Click here](https://github.com/lufurt/FinanceTool-Translated/blob/main/finance-tools.user.js) and click on Install on the next page
+2. [Click here](https://github.com/lufurt/FinanceTool-Translated/raw/main/finance-tools.user.js) and click on Install on the next page
 3. Open [Dugout](https://dugout-online.com/) and go to the finance page 
 
 ### Remarks

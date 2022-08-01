@@ -1037,7 +1037,7 @@ const setupChart = (rawData, projections = []) => {
                 data: transferencias.map(v => v > 0 ? undefined : v * -1),
                 type: 'bar',
                 stack: 'Wages',
-                name: 'Purchases',
+                name: 'Players Bought',
                 color: '#a4161a',
                 yAxisIndex: 0, xAxisIndex: 0
             },
@@ -1061,7 +1061,7 @@ const setupChart = (rawData, projections = []) => {
                 data: diversos.map(v => v > 0 ? undefined : v * -1),
                 type: 'bar',
                 stack: 'Wages',
-                name: 'Other Wages',
+                name: 'Other Expenses',
                 color: '#EA5D5F',
                 yAxisIndex: 0, xAxisIndex: 0
             },
@@ -1069,7 +1069,7 @@ const setupChart = (rawData, projections = []) => {
                 data: patrocinios,
                 type: 'bar',
                 stack: 'Income',
-                name: 'Sponsors',
+                name: 'Sponsorship',
                 color: '#143601',
                 yAxisIndex: 0, xAxisIndex: 0
             },
@@ -1077,7 +1077,7 @@ const setupChart = (rawData, projections = []) => {
                 data: transferencias.map(v => v > 0 ? v : undefined),
                 type: 'bar',
                 stack: 'Income',
-                name: 'Sales',
+                name: 'Players Sold',
                 color: '#245501',
                 yAxisIndex: 0, xAxisIndex: 0
             },
@@ -1085,7 +1085,7 @@ const setupChart = (rawData, projections = []) => {
                 data: tickets,
                 type: 'bar',
                 stack: 'Income',
-                name: 'Tickets',
+                name: 'Ticketing',
                 color: '#538d22',
                 yAxisIndex: 0, xAxisIndex: 0
             },
@@ -1093,7 +1093,7 @@ const setupChart = (rawData, projections = []) => {
                 data: diversos.map(v => v > 0 ? v : undefined),
                 type: 'bar',
                 stack: 'Income',
-                name: 'Other income',
+                name: 'Other Revenues',
                 color: '#73a942',
                 yAxisIndex: 0, xAxisIndex: 0
             },

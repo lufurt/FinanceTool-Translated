@@ -1,6 +1,5 @@
 # FinanceTool-Translated
-A translation from Gabriel Bittencourts' Finance Tool
-Tool for viewing the history and evolution of your club's finances in Dugout-Online
+A translation from Gabriel Bittencourts' Finance Tool, for viewing the history and evolution of your club's finances in Dugout-Online.
 
 ## Installation
 1. install [tampermonkey](https://www.tampermonkey.net/) in your browser

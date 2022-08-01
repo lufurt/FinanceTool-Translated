@@ -773,10 +773,10 @@ const setupEcharts = async (season_id, container) =>
     inputDiv.style.display = 'flex';
     inputDiv.style.textAlign = 'left';
 
-    const sponsorInput = setupInput('Patrocínio diário', projections[1]);
-    const ticketsInput = setupInput('Bilheteria em casa', projections[2]);
-    const friendliesInput = setupInput('Bilheteria amistosos', projections[3]);
-    const mondayInput = setupInput('Despesas de segunda', projections[4]);
+    const sponsorInput = setupInput('Daily Sponsors', projections[1]);
+    const ticketsInput = setupInput('Home Tickets', projections[2]);
+    const friendliesInput = setupInput('Friendlies Tickets', projections[3]);
+    const mondayInput = setupInput('Monday Expenses', projections[4]);
 
     inputDiv.appendChild(sponsorInput);
     inputDiv.appendChild(ticketsInput);
@@ -784,7 +784,7 @@ const setupEcharts = async (season_id, container) =>
     inputDiv.appendChild(mondayInput);
 
     const updateProjectionsBtn = document.createElement('button');
-    updateProjectionsBtn.innerText = 'Atualizar';
+    updateProjectionsBtn.innerText = 'Refresh';
     updateProjectionsBtn.style.cssText = btnCss;
     updateProjectionsBtn.onclick = async () =>
     {
@@ -1028,85 +1028,85 @@ const setupChart = (rawData, projections = []) => {
             {
                 data: salarios,
                 type: 'bar',
-                stack: 'Despesas',
-                name: 'Salários',
+                stack: 'Wages',
+                name: 'Salaries',
                 color: '#660708',
                 yAxisIndex: 0, xAxisIndex: 0
             },
             {
                 data: transferencias.map(v => v > 0 ? undefined : v * -1),
                 type: 'bar',
-                stack: 'Despesas',
-                name: 'Compras',
+                stack: 'Wages',
+                name: 'Purchases',
                 color: '#a4161a',
                 yAxisIndex: 0, xAxisIndex: 0
             },
             {
                 data: contrucoes,
                 type: 'bar',
-                stack: 'Despesas',
-                name: 'Construções',
+                stack: 'Wages',
+                name: 'Construction',
                 color: '#ba181b',
                 yAxisIndex: 0, xAxisIndex: 0
             },
             {
                 data: manutencao,
                 type: 'bar',
-                stack: 'Despesas',
-                name: 'Manutenção',
+                stack: 'Wages',
+                name: 'Maintenance',
                 color: '#e5383b',
                 yAxisIndex: 0, xAxisIndex: 0
             },
             {
                 data: diversos.map(v => v > 0 ? undefined : v * -1),
                 type: 'bar',
-                stack: 'Despesas',
-                name: 'Outras despesas',
+                stack: 'Wages',
+                name: 'Other Wages',
                 color: '#EA5D5F',
                 yAxisIndex: 0, xAxisIndex: 0
             },
             {
                 data: patrocinios,
                 type: 'bar',
-                stack: 'Receitas',
-                name: 'Patrocínios',
+                stack: 'Income',
+                name: 'Sponsors',
                 color: '#143601',
                 yAxisIndex: 0, xAxisIndex: 0
             },
             {
                 data: transferencias.map(v => v > 0 ? v : undefined),
                 type: 'bar',
-                stack: 'Receitas',
-                name: 'Vendas',
+                stack: 'Income',
+                name: 'Sales',
                 color: '#245501',
                 yAxisIndex: 0, xAxisIndex: 0
             },
             {
                 data: tickets,
                 type: 'bar',
-                stack: 'Receitas',
-                name: 'Bilheterias',
+                stack: 'Income',
+                name: 'Tickets',
                 color: '#538d22',
                 yAxisIndex: 0, xAxisIndex: 0
             },
             {
                 data: diversos.map(v => v > 0 ? v : undefined),
                 type: 'bar',
-                stack: 'Receitas',
-                name: 'Outras receitas',
+                stack: 'Income',
+                name: 'Other income',
                 color: '#73a942',
                 yAxisIndex: 0, xAxisIndex: 0
             },
             {
                 data: [...data.slice(0, data.length - projections.length + 1).map(d => d.current), ...projections.map(_ => undefined)],
                 type: 'line',
-                name: 'Saldo atual',
+                name: 'Current balance',
                 color: '#5470c6'
             },
             {
                 data: [...data.slice(0, data.length - projections.length).map(_ => undefined), ...projections.map(d => d.current)],
                 type: 'line',
-                name: 'Saldo previsto',
+                name: 'Expected balance',
                 color: 'orange'
             }
         ]

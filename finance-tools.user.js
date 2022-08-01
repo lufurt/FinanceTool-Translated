@@ -10,8 +10,8 @@
 // @include      http*dugout-online.com/finances/*
 // @grant        GM_addStyle
 // @homepage     https://github.com/gabrielbitencourt/do-finance-tools
-// @downloadURL  https://github.com/gabrielbitencourt/do-finance-tools/raw/main/finance-tools.user.js
-// @updateURL    https://github.com/gabrielbitencourt/do-finance-tools/raw/main/finance-tools.user.js
+// @downloadURL  https://github.com/lufurt/FinanceTool-Translated/blob/main/finance-tools.user.js
+// @updateURL    https://github.com/lufurt/FinanceTool-Translated/blob/main/finance-tools.user.js
 // ==/UserScript==
 
 if (GM_addStyle)

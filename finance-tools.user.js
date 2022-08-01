@@ -773,10 +773,10 @@ const setupEcharts = async (season_id, container) =>
     inputDiv.style.display = 'flex';
     inputDiv.style.textAlign = 'left';
 
-    const sponsorInput = setupInput('Daily Sponsors', projections[1]);
-    const ticketsInput = setupInput('Home Tickets', projections[2]);
-    const friendliesInput = setupInput('Friendlies Tickets', projections[3]);
-    const mondayInput = setupInput('Monday Expenses', projections[4]);
+    const sponsorInput = setupInput('Daily sponsors', projections[1]);
+    const ticketsInput = setupInput('Home tickets', projections[2]);
+    const friendliesInput = setupInput('Friendlies tickets', projections[3]);
+    const mondayInput = setupInput('Monday expenses', projections[4]);
 
     inputDiv.appendChild(sponsorInput);
     inputDiv.appendChild(ticketsInput);
@@ -1037,7 +1037,7 @@ const setupChart = (rawData, projections = []) => {
                 data: transferencias.map(v => v > 0 ? undefined : v * -1),
                 type: 'bar',
                 stack: 'Wages',
-                name: 'Players Bought',
+                name: 'Players bought',
                 color: '#a4161a',
                 yAxisIndex: 0, xAxisIndex: 0
             },
@@ -1061,7 +1061,7 @@ const setupChart = (rawData, projections = []) => {
                 data: diversos.map(v => v > 0 ? undefined : v * -1),
                 type: 'bar',
                 stack: 'Wages',
-                name: 'Other Expenses',
+                name: 'Other expenses',
                 color: '#EA5D5F',
                 yAxisIndex: 0, xAxisIndex: 0
             },
@@ -1077,7 +1077,7 @@ const setupChart = (rawData, projections = []) => {
                 data: transferencias.map(v => v > 0 ? v : undefined),
                 type: 'bar',
                 stack: 'Income',
-                name: 'Players Sold',
+                name: 'Players sold',
                 color: '#245501',
                 yAxisIndex: 0, xAxisIndex: 0
             },
@@ -1093,7 +1093,7 @@ const setupChart = (rawData, projections = []) => {
                 data: diversos.map(v => v > 0 ? v : undefined),
                 type: 'bar',
                 stack: 'Income',
-                name: 'Other Revenues',
+                name: 'Other revenues',
                 color: '#73a942',
                 yAxisIndex: 0, xAxisIndex: 0
             },

@@ -1106,7 +1106,7 @@ const setupChart = (rawData, projections = []) => {
             {
                 data: [...data.slice(0, data.length - projections.length).map(_ => undefined), ...projections.map(d => d.current)],
                 type: 'line',
-                name: 'Expected balance',
+                name: 'Balance',
                 color: 'orange'
             }
         ]

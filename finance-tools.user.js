@@ -953,7 +953,7 @@ const setupChart = (rawData, projections = []) => {
                 tooltip.push(`${receitas.some(r => !isNaN(r.data)) ? '<hr size=1 style="margin: 3px 0">' : ''}${marker('green')}Revenues: ${tooltipSpan(formatNumbers(totalReceitas))}<br/>`);
 
                 tooltip.push(`${params[!projection ? 9 : 10].marker}${params[!projection ? 9 : 10].seriesName}: ${tooltipSpan(formatNumbers(params[!projection ? 9 : 10].data))}`);
-                tooltip.push(`${totalReceitas === totalDespesas ? params[!projection ? 9 : 10].marker : totalReceitas - totalDespesas > 0 ? marker('green') : marker('red')}Daily ${!projection ? 'Var' : 'Proj'}: ${tooltipSpan(formatNumbers(totalReceitas - totalDespesas))}`);
+                tooltip.push(`${totalReceitas === totalDespesas ? params[!projection ? 9 : 10].marker : totalReceitas - totalDespesas > 0 ? marker('green') : marker('red')} ${!projection ? 'Variation' : 'Projection'}: ${tooltipSpan(formatNumbers(totalReceitas - totalDespesas))}`);
                 return tooltip.join('<br/>');
             }
         },

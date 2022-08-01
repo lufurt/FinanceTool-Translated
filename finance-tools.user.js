@@ -794,7 +794,7 @@ const setupEcharts = async (season_id, container) =>
     inputDiv.appendChild(updateProjectionsBtn);
 
     const titleVars = document.createElement('h6');
-    titleVars.innerText = 'Variáveis de projeção';
+    titleVars.innerText = 'Variables';
     titleVars.style.cssText = titleCss;
     container.parentElement.appendChild(titleVars);
     container.parentElement.appendChild(inputDiv);

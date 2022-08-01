@@ -804,7 +804,7 @@ const setupEcharts = async (season_id, container) =>
     optionsDiv.style.textAlign = 'left';
     
     const titleOpts = document.createElement('h6');
-    titleOpts.innerText = 'Opções';
+    titleOpts.innerText = 'Options';
     titleOpts.style.cssText = titleCss;
 
     const backupBtn = document.createElement('button');

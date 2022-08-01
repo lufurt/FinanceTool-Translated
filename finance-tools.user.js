@@ -794,7 +794,7 @@ const setupEcharts = async (season_id, container) =>
     inputDiv.appendChild(updateProjectionsBtn);
 
     const titleVars = document.createElement('h6');
-    titleVars.innerText = 'Variáveis de projeção';
+    titleVars.innerText = 'Projection variables';
     titleVars.style.cssText = titleCss;
     container.parentElement.appendChild(titleVars);
     container.parentElement.appendChild(inputDiv);
@@ -804,7 +804,7 @@ const setupEcharts = async (season_id, container) =>
     optionsDiv.style.textAlign = 'left';
     
     const titleOpts = document.createElement('h6');
-    titleOpts.innerText = 'Opções';
+    titleOpts.innerText = 'Options';
     titleOpts.style.cssText = titleCss;
 
     const backupBtn = document.createElement('button');
@@ -943,14 +943,14 @@ const setupChart = (rawData, projections = []) => {
                     if (param.data) tooltip.push(`${param.marker}${param.seriesName}: ${tooltipSpan(formatNumbers(param.data))}`);
                 }
                 const totalDespesas = despesas.reduce((a, b) => a + (isNaN(b.data) ? 0 : b.data), 0);
-                tooltip.push(`${despesas.some(r => !isNaN(r.data)) ? '<hr size=1 style="margin: 3px 0">' : ''}${marker('red')}Expenses Total: ${tooltipSpan(formatNumbers(totalDespesas))}<br/>`);
+                tooltip.push(`${despesas.some(r => !isNaN(r.data)) ? '<hr size=1 style="margin: 3px 0">' : ''}${marker('red')}Expenses: ${tooltipSpan(formatNumbers(totalDespesas))}<br/>`);
 
                 const receitas = params.slice(5, 9);
                 for (const param of receitas) {
                     if (param.data) tooltip.push(`${param.marker}${param.seriesName}: ${tooltipSpan(formatNumbers(param.data))}`);
                 }
                 const totalReceitas = receitas.reduce((a, b) => a + (isNaN(b.data) ? 0 : b.data), 0);
-                tooltip.push(`${receitas.some(r => !isNaN(r.data)) ? '<hr size=1 style="margin: 3px 0">' : ''}${marker('green')}Revenue Total: ${tooltipSpan(formatNumbers(totalReceitas))}<br/>`);
+                tooltip.push(`${receitas.some(r => !isNaN(r.data)) ? '<hr size=1 style="margin: 3px 0">' : ''}${marker('green')}Revenues: ${tooltipSpan(formatNumbers(totalReceitas))}<br/>`);
 
                 tooltip.push(`${params[!projection ? 9 : 10].marker}${params[!projection ? 9 : 10].seriesName}: ${tooltipSpan(formatNumbers(params[!projection ? 9 : 10].data))}`);
                 tooltip.push(`${totalReceitas === totalDespesas ? params[!projection ? 9 : 10].marker : totalReceitas - totalDespesas > 0 ? marker('green') : marker('red')}Daily ${!projection ? 'Var' : 'Proj'}: ${tooltipSpan(formatNumbers(totalReceitas - totalDespesas))}`);
